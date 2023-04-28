@@ -1,40 +1,63 @@
 import SearchIcon from '@mui/icons-material/Search';
-import HomeIcon from '@mui/icons-material/Home';
-import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-import ChatIcon from '@mui/icons-material/Chat';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
+import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
+import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import HeaderOption from './HeaderOption';
 
 function Header() {
   return (
     // Header
-    <div className="sticky top-0 flex justify-evenly pt-3 pb- w-full z-50 bg-white">
-      {/* Header-left */}
-      <div className="flex">
+    <div className="sticky top-0 flex justify-evenly pt-2 pb-2 w-full z-50 bg-white border">
+      {/* Header Left */}
+      <div className="flex relative">
         <img
-          className="object-contain h-9 mr-3"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png?20140125013055"
+          className="object-contain h-7 mr-7"
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Quora_logo_2015.svg"
           alt="linkedIn logo"
         />
-        {/* Header-Search */}
-        <div className="flex items-center rounded border text-gray-500 bg-[#eef3f8] w-full pl-2 h-9">
-          <SearchIcon />
-          <input
-            className="outline-none bg-transparent border-none p-2"
-            type="text"
-            placeholder="Search"
-          />
+        <div className="flex">
+          <div className="icon">
+            <HeaderOption Icon={HomeOutlinedIcon} />
+          </div>
+          <div className="icon">
+            <HeaderOption Icon={FormatListBulletedOutlinedIcon} />
+          </div>
+          <div className="icon">
+            <HeaderOption Icon={NoteAltOutlinedIcon} />
+          </div>
+          <div className="icon">
+            <HeaderOption Icon={GroupsOutlinedIcon} />
+          </div>
+          <div className="icon">
+            <HeaderOption Icon={NotificationsNoneOutlinedIcon} />
+          </div>
         </div>
       </div>
-      {/* Header-right */}
-      <div className="flex">
-        <HeaderOption Icon={HomeIcon} title="Home" />
-        <HeaderOption Icon={SupervisorAccountIcon} title="My Network" />
-        <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
-        <HeaderOption Icon={ChatIcon} title="Messaging" />
-        <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption title="Me" avatar='https://magnificent-dolphin-599305.netlify.app/IMG_20220422_202835_312%20(1).jpg' />
+      {/* Header Right */}
+      <div className="flex relative -left-16 ">
+        {/* Header-Search */}
+        <div className=" Search-Icon border p-1 rounded w-72 mr-2 ">
+          <SearchIcon />
+          <input
+            className="outline-none"
+            type="text"
+            placeholder="Search Quora"
+          />
+        </div>
+        <button className="border rounded-2xl pr-4 pl-4 h-[30px] ml-2 mr-2 text-xs font-medium text-[#636466] ">
+          Try Quora+
+        </button>
+
+        <HeaderOption avatar="https://reliable-crumble-7d9de0.netlify.app/IMG_20230401_003850_727.jpg" />
+
+        <HeaderOption Icon={LanguageOutlinedIcon} />
+
+        <button className="pl-[10px] pr-[60px] h-[30px] rounded-2xl bg-[#B92B27] text-white font-medium text-xs">
+          Add question
+        </button>
       </div>
     </div>
   );

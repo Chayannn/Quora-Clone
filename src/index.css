@@ -7,6 +7,12 @@
 }
 @layer base {
   .headerOption__Icon {
-    @apply object-contain h-7 w-7 !important;
+    @apply object-contain h-7 w-7 !important; 
+  }
+  .Search-Icon > .MuiSvgIcon-root {
+  @apply  text-gray-400 ;
+  }
+  .icon{
+  @apply mr-4 mt-1;
   }
 }
