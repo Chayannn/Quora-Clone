@@ -1,6 +1,9 @@
 import SearchIcon from '@mui/icons-material/Search';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
+import { VscHome } from 'react-icons/vsc';
+import { FaRegListAlt } from 'react-icons/fa';
+import { HiOutlinePencilAlt, HiOutlineUserGroup } from 'react-icons/hi';
+import { IoNotificationsOutline } from 'react-icons/io5';
+
 import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
@@ -20,19 +23,19 @@ function Header() {
         />
         <div className="flex">
           <div className="icon">
-            <HeaderOption Icon={HomeOutlinedIcon} />
+            <HeaderOption Icon={VscHome} />
           </div>
           <div className="icon">
-            <HeaderOption Icon={FormatListBulletedOutlinedIcon} />
+            <HeaderOption Icon={FaRegListAlt} />
           </div>
           <div className="icon">
-            <HeaderOption Icon={NoteAltOutlinedIcon} />
+            <HeaderOption Icon={HiOutlinePencilAlt} />
           </div>
           <div className="icon">
-            <HeaderOption Icon={GroupsOutlinedIcon} />
+            <HeaderOption Icon={HiOutlineUserGroup} />
           </div>
           <div className="icon">
-            <HeaderOption Icon={NotificationsNoneOutlinedIcon} />
+            <HeaderOption Icon={IoNotificationsOutline} />
           </div>
         </div>
       </div>
