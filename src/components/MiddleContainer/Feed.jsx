@@ -6,7 +6,7 @@ import Avatar from '@mui/material/Avatar';
 function Feed() {
   return (
     // Feed
-    <div className="flex-0.6 pb-96">
+    <div className="flex-[0.6] pb-96">
       {/* Feed Input Container */}
       <div className="bg-white p-3 pb-3 rounded mb-5 max-w-lg mt-4">
         <div className="flex gap-2">

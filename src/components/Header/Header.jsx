@@ -1,12 +1,8 @@
 import SearchIcon from '@mui/icons-material/Search';
-import { VscHome } from 'react-icons/vsc';
+import { BiHome } from 'react-icons/bi';
 import { FaRegListAlt } from 'react-icons/fa';
 import { HiOutlinePencilAlt, HiOutlineUserGroup } from 'react-icons/hi';
-import { IoNotificationsOutline } from 'react-icons/io5';
-
-import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
-import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import { MdOutlineNotifications } from 'react-icons/md';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import HeaderOption from './HeaderOption';
 
@@ -23,7 +19,7 @@ function Header() {
         />
         <div className="flex">
           <div className="icon">
-            <HeaderOption Icon={VscHome} />
+            <HeaderOption Icon={BiHome} />
           </div>
           <div className="icon">
             <HeaderOption Icon={FaRegListAlt} />
@@ -35,7 +31,7 @@ function Header() {
             <HeaderOption Icon={HiOutlineUserGroup} />
           </div>
           <div className="icon">
-            <HeaderOption Icon={IoNotificationsOutline} />
+            <HeaderOption Icon={MdOutlineNotifications} />
           </div>
         </div>
       </div>
