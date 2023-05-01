@@ -4,7 +4,7 @@ import { BsPlus } from 'react-icons/bs';
 
 function SideBar() {
   return (
-    <div className="flex flex-col flex-[0.2]">
+    <div className="flex flex-col mt-4 mr-7">
       <SideBarItems title="Create Space" Icon={BsPlus} />
       <SideBarItems
         title="Human Body"

@@ -3,7 +3,7 @@ import React from 'react';
 
 function SideBarItems({ imageUrl, title, Icon }) {
   return (
-    <div className="flex p-2">
+    <div className="flex p-2 hover:bg-neutral-300">
       <div className="pr-2 pt-2">
         {Icon ? (
           <Icon/>

@@ -9,15 +9,15 @@ import HeaderOption from './HeaderOption';
 function Header() {
   return (
     // Header
-    <div className="sticky top-0 flex justify-evenly pt-2 pb-2 w-full z-50 bg-white border">
+    <div className="sticky top-0 flex justify-evenly pt-2 pb-4 w-full z-50 bg-white border shadow-md">
       {/* Header Left */}
       <div className="flex relative">
         <img
-          className="object-contain h-7 mr-7"
+          className="object-contain h-7 mr-7 mt-1"
           src="https://upload.wikimedia.org/wikipedia/commons/9/91/Quora_logo_2015.svg"
           alt="linkedIn logo"
         />
-        <div className="flex">
+        <div className="flex gap-4">
           <div className="icon">
             <HeaderOption Icon={BiHome} />
           </div>
