@@ -6,37 +6,44 @@ import Avatar from '@mui/material/Avatar';
 function Feed() {
   return (
     // Feed
-    <div className="flex-[0.6] pb-96">
+    <main className="w-1/2 pb-5">
       {/* Feed Input Container */}
-      <div className="bg-white p-3 pb-3 rounded mb-5 mt-4">
-        <div className="flex gap-2">
-          <Avatar className='h-4 w-4' src="https://reliable-crumble-7d9de0.netlify.app/IMG_20230401_003850_727.jpg" />
-          {/* Feed Input */}
-          <div className=" flex border p-1 rounded-2xl w-full border-gray-400 bg-gray-100">
-            <form className="flex w-full">
-              <input
-                className="border-none flex-1 ml-3 outline-0 font-normal bg-transparent"
-                type="text"
-                placeholder="What do you want to ask or share?"
-              />
-              <button className="hidden" type="submit"></button>
-            </form>
+      <section className=" p-3 mb-5 mt-4 border rounded shadow-sm bg-white">
+        <div className="flex gap-x-2">
+          <Avatar
+            src="https://reliable-crumble-7d9de0.netlify.app/IMG_20230401_003850_727.jpg"
+          />
+          <div className="flex-col w-full">
+            {/* Feed Input */}
+            <div className=" flex border border-neutral-200 rounded-2xl w-full bg-neutral-50">
+              <form className="flex w-full">
+                <input
+                  className="flex-1 ml-3 py-[3px] font-normal text-lg border-0 outline-0 bg-transparent"
+                  type="text"
+                  placeholder="What do you want to ask or share?"
+                />
+                <button className="sr-only" type="submit"></button>
+              </form>
+            </div>
+            {/* Feed Input Options */}
+            <div className="flex justify-between">
+              <InputFeed Icon={MdOutlineLiveHelp} title="Ask" />
+              <hr/>
+              <InputFeed Icon={HiOutlinePencilAlt} title="Answer" />
+              <hr />
+              <InputFeed Icon={HiOutlinePencil} title="Post" />
+              <hr />
+            </div>
           </div>
         </div>
-        {/* Feed Input Options */}
-        <div className="flex justify-evenly">
-          <InputFeed Icon={MdOutlineLiveHelp} title="Ask" />
-          <InputFeed Icon={HiOutlinePencilAlt} title="Answer" />
-          <InputFeed Icon={HiOutlinePencil} title="Post" />
-        </div>
-      </div>
+      </section>
       <Post
         name="Trex"
         message="Test"
         description="this is a test"
         photoUrl=""
       />
-    </div>
+    </main>
   );
 }
 

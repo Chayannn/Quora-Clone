@@ -5,7 +5,7 @@ function HeaderOption({ avatar, Icon, title, onClick }) {
     <div
       className="flex flex-col items-center mr-4 cursor-pointer text-black text-opacity-60 hover:text-[#B92B27]"
       onClick={onClick}>
-      {Icon && <Icon className="headerOption__Icon" />}
+      {Icon && <Icon  className="headerOption__Icon" />}
       {avatar && (
         <Avatar
           className="headerOption__Icon"
