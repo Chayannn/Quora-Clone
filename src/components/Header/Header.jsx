@@ -1,8 +1,7 @@
-import SearchIcon from '@mui/icons-material/Search';
-import { BiHome } from 'react-icons/bi';
+import { BsChevronDown } from 'react-icons/bs';
 import { FaRegListAlt } from 'react-icons/fa';
 import { HiOutlinePencilAlt, HiOutlineUserGroup } from 'react-icons/hi';
-import { MdOutlineNotifications } from 'react-icons/md';
+import { MdOutlineNotifications , MdHome } from 'react-icons/md';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import HeaderOption from './HeaderOption';
 import SearchBar from './SearchBar';
@@ -18,9 +17,10 @@ function Header() {
           src="https://upload.wikimedia.org/wikipedia/commons/9/91/Quora_logo_2015.svg"
           alt="Quora logo"
         />
-        <div className="flex gap-x-3">
-          <div className="icon">
-            <HeaderOption size="lg" Icon={BiHome} />
+        <div className="flex gap-x-2 i">
+          <div className="icon flex flex-col justify-between">
+            <HeaderOption size="lg" Icon={MdHome} color='#B92B27' />
+            <div className='relative top-2 h-[3px] px-6 rounded bg-red-500'></div>
           </div>
           <div className="icon">
             <HeaderOption Icon={FaRegListAlt} />
@@ -52,9 +52,15 @@ function Header() {
 
           <HeaderOption Icon={LanguageOutlinedIcon} />
         </div>
-        <button className="pl-[10px] pr-[60px] h-[30px] rounded-2xl bg-[#B92B27] text-white font-medium text-xs">
-          Add question
-        </button>
+        {/* Add Question Button */}
+        <div className="flex items-center">
+          <button className="text-sm h-8 px-3 font-semibold rounded-l-full bg-[#B92B27] text-white">
+            Add question
+          </button>
+          <div className="h-8 px-3 flex items-center text-white rounded-r-full bg-[#B92B27]">
+            <BsChevronDown />
+          </div>
+        </div>
       </div>
     </header>
   );

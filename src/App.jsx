@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="flex flex-col justify-evenly bg-neutral-100">
       <Header />
-      <div className="flex ml-20 mt-1 mb-52">
+      <div className="flex flex-grow-0 mx-20  mt-1 mb-52">
         <SideBar />
         <Feed />
         <AdContainer />

@@ -1,11 +1,11 @@
 import Avatar from '@mui/material/Avatar';
-function HeaderOption({ avatar, Icon, title, onClick }) {
+function HeaderOption({ avatar, Icon, title, onClick , color }) {
   return (
     // Header Option
     <div
       className="flex flex-col items-center mr-3 cursor-pointer text-black text-opacity-60 hover:text-[#B92B27]"
       onClick={onClick}>
-      {Icon && <Icon  className="headerOption__Icon" />}
+      {Icon && <Icon  className="headerOption__Icon" style={{ color: color }}  />}
       {avatar && (
         <Avatar
           className="headerOption__Icon"
