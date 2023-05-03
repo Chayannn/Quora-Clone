@@ -6,16 +6,22 @@
   margin: 0;
 }
 @layer base {
-  .headerOption__Icon {
-    @apply object-contain h-7 w-7 !important;
+  .login > input {
+    @apply w-[350px] h-[50px] text-xl pl-[10px] mb-[10px] rounded-md border;
   }
-  .Search-Icon > .MuiSvgIcon-root {
-    @apply text-gray-400;
-  }
-  .icon {
-    @apply mr-4 mt-1;
-  }
-  .button_style {
-    @apply flex items-center border shadow-sm  bg-neutral-100  hover:bg-neutral-200;
-  }
+}
+.headerOption__Icon {
+  @apply object-contain h-8 w-8 !important;
+}
+.Search-Icon > .MuiSvgIcon-root {
+  @apply text-gray-400;
+}
+.icon {
+  @apply mr-4 mt-1;
+}
+.button_style {
+  @apply flex items-center border shadow-sm  bg-neutral-100  hover:bg-neutral-200;
+}
+body {
+  background-image: url('src/components/Login/loginbg.jpeg'); 
 }

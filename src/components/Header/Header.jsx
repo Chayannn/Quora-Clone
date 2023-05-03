@@ -1,12 +1,19 @@
 import { BsChevronDown } from 'react-icons/bs';
 import { FaRegListAlt } from 'react-icons/fa';
 import { HiOutlinePencilAlt, HiOutlineUserGroup } from 'react-icons/hi';
-import { MdOutlineNotifications , MdHome } from 'react-icons/md';
+import { MdOutlineNotifications, MdHome } from 'react-icons/md';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import HeaderOption from './HeaderOption';
 import SearchBar from './SearchBar';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../features/userSlice';
+import { auth } from '../../firebase';
 
-function Header() {
+const Header = () => {
+  const dispatch = useDispatch();
+  const logoutOfApp = () => {
+    dispatch(logout(auth.signOut));
+  };
   return (
     // Header
     <header className="sticky top-0 flex justify-center pt-2 pb-2 z-50 bg-white shadow-sm">
@@ -19,8 +26,8 @@ function Header() {
         />
         <div className="flex gap-x-2 i">
           <div className="icon flex flex-col justify-between">
-            <HeaderOption size="lg" Icon={MdHome} color='#B92B27' />
-            <div className='relative top-2 h-[3px] px-6 rounded bg-red-500'></div>
+            <HeaderOption size="lg" Icon={MdHome} color="#B92B27" />
+            <div className="relative top-2 h-[3px] px-6 rounded bg-[#B92B27] "></div>
           </div>
           <div className="icon">
             <HeaderOption Icon={FaRegListAlt} />
@@ -48,7 +55,7 @@ function Header() {
           </button>
         </div>
         <div className="flex my-auto px-2">
-          <HeaderOption avatar="https://reliable-crumble-7d9de0.netlify.app/IMG_20230401_003850_727.jpg" />
+          <HeaderOption avatar={true} onClick={logoutOfApp} />
 
           <HeaderOption Icon={LanguageOutlinedIcon} />
         </div>
@@ -64,6 +71,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;
